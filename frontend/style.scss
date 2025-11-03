@@ -1,0 +1,167 @@
+/* ==============================
+   FroggyWallet Minimal SCSS
+   ============================== */
+
+/* --- Variables --- */
+$color-primary: #2ba84a;
+$color-accent: #00a3ff;
+$color-danger: #e11d48;
+$color-bg-light: #f8fbfa;
+$color-bg-dark: #0f1720;
+$radius: 10px;
+$space: 1rem;
+
+/* --- Base --- */
+:root {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 16px;
+  --bg: #{$color-bg-light};
+  --text: #333;
+  --surface: #fff;
+  --primary: #{$color-primary};
+  --accent: #{$color-accent};
+  --danger: #{$color-danger};
+}
+
+.theme--dark {
+  --bg: #{$color-bg-dark};
+  --text: #cbd5e1;
+  --surface: #0b1220;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+/* --- Layout --- */
+.app {
+  display: grid;
+  gap: $space;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: $space;
+}
+
+/* --- Header --- */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  color: var(--primary);
+
+  &__icon {
+    width: 36px;
+    height: 36px;
+    border-radius: $radius;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* --- Buttons --- */
+.btn {
+  padding: 10px 14px;
+  border: none;
+  border-radius: $radius;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.15s ease;
+
+  &--primary {
+    background: var(--primary);
+    color: #fff;
+  }
+
+  &--danger {
+    background: var(--danger);
+    color: #fff;
+  }
+
+  &:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+  }
+}
+
+/* --- Card --- */
+.card {
+  background: var(--surface);
+  border-radius: $radius;
+  padding: $space;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* --- Inputs --- */
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: $radius;
+  border: 1px solid #ddd;
+  outline: none;
+
+  &:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(0, 163, 255, 0.2);
+  }
+}
+
+/* --- Transaction List --- */
+.tx-list {
+  display: grid;
+  gap: 8px;
+
+  &__item {
+    background: var(--surface);
+    border-radius: $radius;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .badge {
+    padding: 4px 8px;
+    border-radius: 999px;
+    font-size: 13px;
+    color: #fff;
+
+    &--in { background: linear-gradient(90deg, #2dd4bf, #60a5fa); }
+    &--out { background: linear-gradient(90deg, #fb7185, #f97316); }
+  }
+}
+
+/* --- Toasts --- */
+.toast {
+  position: fixed;
+  right: $space;
+  bottom: $space;
+  padding: 12px 14px;
+  background: var(--surface);
+  border-left: 4px solid var(--primary);
+  border-radius: $radius;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  animation: fade-in 0.2s ease;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Small utilities --- */
+.text-muted { color: #888; font-size: 14px; }
+.center { display: flex; align-items: center; justify-content: center; }
+
