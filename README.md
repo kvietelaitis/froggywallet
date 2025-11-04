@@ -1,5 +1,9 @@
-<<<<<<< HEAD
 # froggywallet
-=======
-# froggywallet
->>>>>>> 571996172c7ba6645cb55c73d36a718734cc37d7
+
+## prerequisites
+
+this project is based on go (backend), react (frontend) and docker (database). 
+
+### docker setup
+
+- windows:
