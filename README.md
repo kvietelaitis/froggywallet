@@ -76,3 +76,23 @@ This project is based on Golang (backend), React (frontend) and Docker (database
     node -v
     npm -v
     ```
+    
+2. **Install dependencies**
+
+    Navigate to the projects root directory and run the command:
+    
+    ```
+    npm install
+    ```
+
+    this will install all of the needed dependencies from the package.json file.
+    
+3. **Start React Frontend**
+
+    Run the command:
+    
+    ```
+    npm run dev
+    ```
+    
+    This will start the React frontend.
