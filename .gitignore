@@ -44,6 +44,9 @@ jspm_packages/
 .env.*
 !.env.example
 
+# Docker-Compose file
+docker-compose.yml
+
 # Editor directories and files
 .vscode/
 .idea/
