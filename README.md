@@ -66,3 +66,13 @@ This project is based on Golang (backend), React (frontend) and Docker (database
     
     This will start the Golang part of the project, automatically installing packages from go.mod file and populate the database with tables (if Docker container setup is completed and it is operating).
     
+## React setup:
+
+1. **Install Node.js (for React and it's packages)**
+    - Download from [https://nodejs.org/](https://nodejs.org/)
+    - Run the installer.
+    - Verify installation:
+    ```bash
+    node -v
+    npm -v
+    ```
