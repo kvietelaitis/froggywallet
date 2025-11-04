@@ -6,7 +6,7 @@ this project is based on go (backend), react (frontend) and docker (database).
 
 ### docker setup
 
-- windows:
+- **windows**:
 
     check system requirements for docker desktop, specifically the part about wsl 2, as docker desktop uses it.
     
