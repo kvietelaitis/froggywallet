@@ -99,5 +99,5 @@ This project is based on Golang (backend), React (frontend) and Docker (database
     
 ## Order and other tidbits:
 
-   The order in which all of these services are started is important (Docker -> Go -> React). 
-   A .env file is needed for the backend to connect to the database (an example file is a part of the project).
+   - The order in which all of these services are started is important (Docker -> Go -> React). 
+   - A .env file is needed for the backend to connect to the database (an example file is a part of the project).
