@@ -3,7 +3,7 @@ package initializers
 import (
 	"os"
 
-	"github.com/KvietelaitisMartynas/froggywallet/models"
+	"github.com/KvietelaitisMartynas/froggywallet/backend/models"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )

@@ -60,3 +60,8 @@ docker-compose.yml
 
 # OS generated files
 Thumbs.db
+
+# Backend
+backend/.env
+backend/*.exe
+backend/*.test

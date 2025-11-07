@@ -1,4 +1,4 @@
-module github.com/KvietelaitisMartynas/froggywallet
+module github.com/KvietelaitisMartynas/froggywallet/backend
 
 go 1.25.3
 
