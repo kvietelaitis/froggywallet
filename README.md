@@ -24,7 +24,7 @@ This project is based on Golang (backend), React (frontend) and Docker (database
 
 3. **Run the Project**
 
-    Before starting, check the example docker compose file. Copy it's contents to a .yml file and values next database user and password. 
+    Before starting, check the example docker compose file. Copy it's contents to a .yml file and add values next database user and password. 
 
     Navigate to the project’s backend directory and run:
     ```bash
