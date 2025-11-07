@@ -27,7 +27,7 @@ export default function LoginPage() {
       if (response.ok) {
         // Store user data (consider using localStorage or context)
         localStorage.setItem('user', JSON.stringify(data.data));
-        navigate('/'); // Redirect to home
+        navigate('/home'); // Redirect to home
       } else {
         setError(data.message || 'Login failed');
       }
@@ -70,6 +70,8 @@ export default function LoginPage() {
         >
           {loading ? 'Logging in...' : 'Login'}
         </button>
+
+        <a href="/register" style={{ marginLeft: '15px' }}>Register</a>
       </form>
     </div>
   );
