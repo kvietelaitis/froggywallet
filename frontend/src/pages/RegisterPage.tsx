@@ -22,7 +22,6 @@ export default function RegisterPage() {
 
     const data = await res.json()
     if (res.ok) {
-      // registration successful -> redirect to login or auto-login
       navigate('/')
     } else {
       setError(data.error || data.message || 'Registration failed')
@@ -31,15 +30,62 @@ export default function RegisterPage() {
 
   return (
     <div style={{ maxWidth: 420, margin: '40px auto' }}>
-      <h1>Register</h1>
+      <h1>Registracija</h1>
+
       <form onSubmit={handleSubmit}>
-        <input value={vartotojo_vardas} onChange={e=>setVartotojoVardas(e.target.value)} placeholder="Vartotojo Vardas" required />
-        <input value={vardas} onChange={e=>setVardas(e.target.value)} placeholder="Vardas" required />
-        <input value={pavarde} onChange={e=>setPavarde(e.target.value)} placeholder="Pavardė" required />
-        <input value={el_pastas} onChange={e=>setEmail(e.target.value)} placeholder="El. paštas" type="email" required />
-        <input value={slaptazodis} onChange={e=>setPassword(e.target.value)} placeholder="Slaptažodis" type="password" required />
+        <div style={{ marginBottom: '15px', width: '100%' }}>
+          <label>Vartotojo vardas:</label>
+          <input 
+            value={vartotojo_vardas} 
+            onChange={e=>setVartotojoVardas(e.target.value)} 
+            required 
+            style={{ width: '100%', padding: '8px', boxSizing: 'border-box', marginTop: '5px' }}
+          />
+        </div>
+
+        <div style={{ display: 'flex', gap: '15px', marginBottom: '15px', width: '100%' }}>
+          <div style={{ flex: 1, minWidth: 0 }}>
+            <label style={{ display: 'block', marginBottom: '5px' }}>Vardas</label>
+            <input 
+              value={vardas} 
+              onChange={e=>setVardas(e.target.value)} 
+              style={{ width: '100%', padding: '8px', boxSizing: 'border-box', marginTop: '5px' }}
+              required />
+          </div>
+          <div style={{ flex: 1, minWidth: 0 }}>
+            <label style={{ display: 'block', marginBottom: '5px' }}>Pavardė</label>
+            <input 
+              value={pavarde} 
+              onChange={e=>setPavarde(e.target.value)} 
+              style={{ width: '100%', padding: '8px', boxSizing: 'border-box', marginTop: '5px' }}
+              required />
+          </div>
+        </div>
+        
+        <div style={{ marginBottom: '15px', width: '100%' }}>
+          <label>El. paštas:</label>
+          <input 
+            type="email"
+            value={el_pastas} 
+            onChange={e=>setEmail(e.target.value)} 
+            required 
+            style={{ width: '100%', padding: '8px', boxSizing: 'border-box', marginTop: '5px' }}
+          />
+        </div>
+
+        <div style={{ marginBottom: '15px', width: '100%' }}>
+          <label>Slaptažodis:</label>
+          <input
+            type="password"
+            value={slaptazodis} 
+            onChange={e=>setPassword(e.target.value)} 
+            required 
+            style={{ width: '100%', padding: '8px', boxSizing: 'border-box', marginTop: '5px' }}
+          />
+        </div>
+
         {error && <div style={{ color: 'red' }}>{error}</div>}
-        <button type="submit">Register</button>
+        <button type="submit">Registruotis</button>
       </form>
     </div>
   )
