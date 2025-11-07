@@ -35,9 +35,9 @@ export default function RegisterPage() {
       <form onSubmit={handleSubmit}>
         <input value={vartotojo_vardas} onChange={e=>setVartotojoVardas(e.target.value)} placeholder="Vartotojo Vardas" required />
         <input value={vardas} onChange={e=>setVardas(e.target.value)} placeholder="Vardas" required />
-        <input value={pavarde} onChange={e=>setPavarde(e.target.value)} placeholder="Pavarde" required />
-        <input value={el_pastas} onChange={e=>setEmail(e.target.value)} placeholder="Email" type="email" required />
-        <input value={slaptazodis} onChange={e=>setPassword(e.target.value)} placeholder="Password" type="password" required />
+        <input value={pavarde} onChange={e=>setPavarde(e.target.value)} placeholder="Pavardė" required />
+        <input value={el_pastas} onChange={e=>setEmail(e.target.value)} placeholder="El. paštas" type="email" required />
+        <input value={slaptazodis} onChange={e=>setPassword(e.target.value)} placeholder="Slaptažodis" type="password" required />
         {error && <div style={{ color: 'red' }}>{error}</div>}
         <button type="submit">Register</button>
       </form>

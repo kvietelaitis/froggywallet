@@ -69,14 +69,20 @@ func Register(c *fiber.Ctx) error {
 	var existing models.Narys
 	if err := initializers.DB.Where("el_pastas = ?", body.ElPastas).First(&existing).Error; err == nil {
 		return c.Status(fiber.StatusBadRequest).JSON(fiber.Map{
-			"error": "Email already in use",
+			"error": "El. paštas jau naudojamas.",
+		})
+	}
+
+	if err := initializers.DB.Where("vartotojo_vardas = ?", body.VartotojoVardas).First(&existing).Error; err == nil {
+		return c.Status(fiber.StatusBadRequest).JSON(fiber.Map{
+			"error": "Vartotojo vardas jau naudojamas.",
 		})
 	}
 
 	hashed, err := bcrypt.GenerateFromPassword([]byte(body.Slaptazodis), 10)
 	if err != nil {
 		return c.Status(fiber.StatusInternalServerError).JSON(fiber.Map{
-			"error": "Failed to hash password",
+			"error": "Nepavyko užregistruoti vartotojo",
 		})
 	}
 
@@ -90,8 +96,7 @@ func Register(c *fiber.Ctx) error {
 
 	if err := initializers.DB.Create(&user).Error; err != nil {
 		return c.Status(fiber.StatusInternalServerError).JSON(fiber.Map{
-			"error":   "Failed to create user",
-			"details": err.Error(),
+			"error": "Nepavyko sukurti vartotojo",
 		})
 	}
 
