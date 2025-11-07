@@ -37,6 +37,7 @@ func main() {
 	api := app.Group("/api")
 	api.Get("/users", controllers.GetUsers)
 	api.Post("/login", controllers.Login)
+	api.Post("/register", controllers.Register)
 
 	// // setup routes
 	// frontend_routes := []string{

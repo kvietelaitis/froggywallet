@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
@@ -27,7 +27,7 @@ export default function LoginPage() {
       if (response.ok) {
         // Store user data (consider using localStorage or context)
         localStorage.setItem('user', JSON.stringify(data.data));
-        navigate('/'); // Redirect to home
+        navigate('/home'); // Redirect to home
       } else {
         setError(data.message || 'Login failed');
       }
@@ -40,10 +40,10 @@ export default function LoginPage() {
 
   return (
     <div style={{ maxWidth: '400px', margin: '50px auto', padding: '20px' }}>
-      <h1>Login</h1>
+      <h1>Froggywallet</h1>
       <form onSubmit={handleSubmit}>
         <div style={{ marginBottom: '15px' }}>
-          <label>Email:</label>
+          <label>El. Paštas:</label>
           <input
             type="email"
             value={email}
@@ -53,7 +53,7 @@ export default function LoginPage() {
           />
         </div>
         <div style={{ marginBottom: '15px' }}>
-          <label>Password:</label>
+          <label>Slaptažodis:</label>
           <input
             type="password"
             value={password}
@@ -68,8 +68,10 @@ export default function LoginPage() {
           disabled={loading}
           style={{ padding: '10px 20px', cursor: 'pointer' }}
         >
-          {loading ? 'Logging in...' : 'Login'}
+          {loading ? 'Vyksta prisijungimas' : 'Prisijungti'}
         </button>
+
+        <Link to="/register" style={{ marginLeft: '15px' }}>Registruotis</Link>
       </form>
     </div>
   );
