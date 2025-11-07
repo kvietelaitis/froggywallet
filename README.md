@@ -24,7 +24,9 @@ This project is based on Golang (backend), React (frontend) and Docker (database
 
 3. **Run the Project**
 
-    In the project’s root directory, run:
+    Before starting, check the example docker compose file. Copy it's contents to a .yml file and values next database user and password. 
+
+    Navigate to the project’s backend directory and run:
     ```bash
     docker compose pull
     docker compose up -d
@@ -59,7 +61,7 @@ This project is based on Golang (backend), React (frontend) and Docker (database
     
 3. **Running the backend part of the project**
 
-    Navigate to the projects root directory and run the command:
+    Navigate to the project's backend directory and run the command:
     ```
     go run main.go --migrate --seed
     ```
@@ -79,7 +81,7 @@ This project is based on Golang (backend), React (frontend) and Docker (database
     
 2. **Install dependencies**
 
-    Navigate to the projects root directory and run the command:
+    Navigate to the projects frontend directory and run the command:
     
     ```
     npm install
