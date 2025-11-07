@@ -39,40 +39,50 @@ export default function LoginPage() {
   };
 
   return (
-    <div style={{ maxWidth: '400px', margin: '50px auto', padding: '20px' }}>
-      <h1>Froggywallet</h1>
-      <form onSubmit={handleSubmit}>
-        <div style={{ marginBottom: '15px' }}>
-          <label>El. Paštas:</label>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-            style={{ width: '100%', padding: '8px', marginTop: '5px' }}
-          />
-        </div>
-        <div style={{ marginBottom: '15px' }}>
-          <label>Slaptažodis:</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-            style={{ width: '100%', padding: '8px', marginTop: '5px' }}
-          />
-        </div>
-        {error && <p style={{ color: 'red' }}>{error}</p>}
-        <button 
-          type="submit" 
-          disabled={loading}
-          style={{ padding: '10px 20px', cursor: 'pointer' }}
-        >
-          {loading ? 'Vyksta prisijungimas' : 'Prisijungti'}
-        </button>
+    <div className='auth-container'>
+      <div style={{ maxWidth: '400px', margin: '50px auto', padding: '20px' }}>
+        <h1 style={{ marginBottom: '50px' }}>Froggywallet</h1>
+        <form onSubmit={handleSubmit}>
+          {error && <p style={{ color: 'var(--color-error)' }}>{error}</p>}
+          <div style={{ marginBottom: '15px' }}>
+            <label>El. Paštas:</label>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
+          <div style={{ marginBottom: '15px' }}>
+            <label>Slaptažodis:</label>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
+          
+          <div style={{ marginBottom: '15px' }}>
+            <button 
+              type="submit" 
+              disabled={loading}
+            >
+              {loading ? 'Vyksta prisijungimas' : 'Prisijungti'}
+            </button>
 
-        <Link to="/register" style={{ marginLeft: '15px' }}>Registruotis</Link>
-      </form>
+            <h3 style={{ marginTop: '20px' }}>Neturite paskyros?</h3>
+
+            <button
+              className='reg-button'
+              type='button'
+              onClick={() => navigate('/register')}
+            >
+              Registruotis
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }
