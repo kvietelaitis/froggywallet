@@ -6,6 +6,7 @@
   --text-primary: #1a3d2e;
   --text-secondary: #2d5a45;
   --accent: #5fb878;
+  --accent-light: #81c784;
   --accent-hover: #4a9d61;
   --border: #c8e6d7;
   --shadow: rgba(47, 90, 70, 0.1);
@@ -19,6 +20,7 @@
     --text-primary: #e8f5e9;
     --text-secondary: #c8e6d7;
     --accent: #66bb6a;
+    --accent-light: #81c784;
     --accent-hover: #81c784;
     --border: #3d5a4d;
     --shadow: rgba(0, 0, 0, 0.3);
@@ -61,6 +63,7 @@ body {
 }
 
 button {
+  width: 100%;
   background: var(--accent);
   color: white;
   border: none;
@@ -70,6 +73,18 @@ button {
   font-weight: 500;
   cursor: pointer;
   transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.reg-button {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+}
+
+.reg-button:hover {
+  background: var(--accent-light);
+  color: white;
+  border-color: var(--accent-light);
 }
 
 button:hover {
@@ -82,11 +97,14 @@ button:active {
 }
 
 input, textarea, select {
+  width: 100%;
   background: var(--bg-secondary);
   color: var(--text-primary);
   border: 1px solid var(--border);
   padding: 0.75rem;
+  margin-top: 5px;
   border-radius: 8px;
+  box-sizing: border-box;
   font-size: 1rem;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
@@ -119,4 +137,12 @@ a {
 a:hover {
   color: var(--accent-hover);
   text-decoration: underline;
+}
+
+.auth-container {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
 }

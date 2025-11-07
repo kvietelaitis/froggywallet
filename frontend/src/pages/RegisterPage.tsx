@@ -29,64 +29,61 @@ export default function RegisterPage() {
   }
 
   return (
-    <div style={{ maxWidth: 420, margin: '40px auto' }}>
-      <h1>Registracija</h1>
+     <div className='auth-container'>
+      <div style={{ maxWidth: 420, margin: '40px auto' }}>
+        <h1>Registracija</h1>
 
-      <form onSubmit={handleSubmit}>
-        <div style={{ marginBottom: '15px', width: '100%' }}>
-          <label>Vartotojo vardas:</label>
-          <input 
-            value={vartotojo_vardas} 
-            onChange={e=>setVartotojoVardas(e.target.value)} 
-            required 
-            style={{ width: '100%', padding: '8px', boxSizing: 'border-box', marginTop: '5px' }}
-          />
-        </div>
-
-        <div style={{ display: 'flex', gap: '15px', marginBottom: '15px', width: '100%' }}>
-          <div style={{ flex: 1, minWidth: 0 }}>
-            <label style={{ display: 'block', marginBottom: '5px' }}>Vardas</label>
+        <form onSubmit={handleSubmit}>
+          <div style={{ marginBottom: '15px', width: '100%' }}>
+            <label>Vartotojo vardas:</label>
             <input 
-              value={vardas} 
-              onChange={e=>setVardas(e.target.value)} 
-              style={{ width: '100%', padding: '8px', boxSizing: 'border-box', marginTop: '5px' }}
-              required />
+              value={vartotojo_vardas} 
+              onChange={e=>setVartotojoVardas(e.target.value)} 
+              required 
+            />
           </div>
-          <div style={{ flex: 1, minWidth: 0 }}>
-            <label style={{ display: 'block', marginBottom: '5px' }}>Pavardė</label>
+
+          <div style={{ display: 'flex', gap: '15px', marginBottom: '15px', width: '100%' }}>
+            <div style={{ flex: 1, minWidth: 0 }}>
+              <label>Vardas:</label>
+              <input 
+                value={vardas} 
+                onChange={e=>setVardas(e.target.value)} 
+                required />
+            </div>
+            <div style={{ flex: 1, minWidth: 0 }}>
+              <label>Pavardė:</label>
+              <input 
+                value={pavarde} 
+                onChange={e=>setPavarde(e.target.value)} 
+                required />
+            </div>
+          </div>
+          
+          <div style={{ marginBottom: '15px', width: '100%' }}>
+            <label>El. paštas:</label>
             <input 
-              value={pavarde} 
-              onChange={e=>setPavarde(e.target.value)} 
-              style={{ width: '100%', padding: '8px', boxSizing: 'border-box', marginTop: '5px' }}
-              required />
+              type="email"
+              value={el_pastas} 
+              onChange={e=>setEmail(e.target.value)} 
+              required 
+            />
           </div>
-        </div>
-        
-        <div style={{ marginBottom: '15px', width: '100%' }}>
-          <label>El. paštas:</label>
-          <input 
-            type="email"
-            value={el_pastas} 
-            onChange={e=>setEmail(e.target.value)} 
-            required 
-            style={{ width: '100%', padding: '8px', boxSizing: 'border-box', marginTop: '5px' }}
-          />
-        </div>
 
-        <div style={{ marginBottom: '15px', width: '100%' }}>
-          <label>Slaptažodis:</label>
-          <input
-            type="password"
-            value={slaptazodis} 
-            onChange={e=>setPassword(e.target.value)} 
-            required 
-            style={{ width: '100%', padding: '8px', boxSizing: 'border-box', marginTop: '5px' }}
-          />
-        </div>
+          <div style={{ marginBottom: '15px', width: '100%' }}>
+            <label>Slaptažodis:</label>
+            <input
+              type="password"
+              value={slaptazodis} 
+              onChange={e=>setPassword(e.target.value)} 
+              required 
+            />
+          </div>
 
-        {error && <div style={{ color: 'red' }}>{error}</div>}
-        <button type="submit">Registruotis</button>
-      </form>
+          {error && <div style={{ color: 'red' }}>{error}</div>}
+          <button type="submit">Registruotis</button>
+        </form>
+      </div>
     </div>
   )
 }
