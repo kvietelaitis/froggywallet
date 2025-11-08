@@ -60,6 +60,7 @@ This project is based on Golang (backend), React (frontend) and Docker (database
     If no errors are present, Go has been installed correctly.
     
 3. **Running the backend part of the project**
+    Before running the project, make sure to have a .env file like the one in the given example. The DB_URL should have the username, password and port from your docker-compose.yaml file. The PORT value indicates what port the frontend tries to connect to.
 
     Navigate to the project's backend directory and run the command:
     ```
