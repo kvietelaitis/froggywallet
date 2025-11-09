@@ -61,6 +61,10 @@ body {
   margin-left: 200px; /* sidebar width */
 }
 
+.app-main-content.no-sidebar {
+  margin-left: 0;
+}
+
 .auth-container {
   min-height: 90vh;
   display: flex;
