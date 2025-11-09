@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from 'react-router-dom'
 
 type Tx = {
     id: string;
@@ -155,6 +156,9 @@ const HomePage: React.FC = () => {
                     )}
                 </aside>
             </section>
+            <Link to="/expenses" style={{ textDecoration: 'underline', color: 'red' }}>
+              <p>Eiti į išlaidų sąrašą</p>
+            </Link>
         </div>
     );
 };
