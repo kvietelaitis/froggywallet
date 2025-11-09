@@ -27,7 +27,7 @@ export default function LoginPage() {
       if (response.ok) {
         // Store user data (consider using localStorage or context)
         localStorage.setItem('user', JSON.stringify(data.data));
-        navigate('/home'); // Redirect to home
+        navigate('/auth'); // Redirect to auth page
       } else {
         setError(data.message || 'Login failed');
       }
