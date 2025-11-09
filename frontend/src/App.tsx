@@ -8,11 +8,13 @@ import SidebarMenu, {type MenuItem} from './_components/Sidebar'
 import type { JSX } from 'react'
 import ExpensesRoutes from './pages/Expenses/ExpenseRoutes'
 import LoanRoutes from './pages/Loans/LoanRoutes'
+import InvestmentsRoutes from './pages/Investments/InvestmentRoutes'
 
 const menuItems: MenuItem[] = [
     { title: 'Home', path: '/home' },
     { title: 'Expenses', path: '/expenses' },
     { title: 'Loans', path: '/loan' },
+    { title: 'Investments', path: '/investments' },
     { title: 'Settings', path: '/settings' },
 ];
 
@@ -32,6 +34,9 @@ function AppContent(): JSX.Element {
 
             {/* Expense Routes */}
             <Route path="/expenses/*" element={<ExpensesRoutes />} />
+
+            {/* Investations Routes */}
+            <Route path="/investments/*" element={<InvestmentsRoutes/>} />
 
             {/* Loan Routes */}
             <Route path="/loan/*" element={<LoanRoutes />} />
