@@ -73,6 +73,11 @@ const HomePage: React.FC = () => {
 
     return (
         <div style={{ fontFamily: "Inter, system-ui, sans-serif", padding: 24 }}>
+            <div style={{ display: "flex", alignItems: "left", gap: 16 }}>
+                <button style={{margin: "10px"}} onClick={() => navigate('/loan')}>
+                    Go to loans page
+                </button>
+            </div>
             <header style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 18 }}>
                 <h1 style={{ margin: 0, fontSize: 20 }}>Froggy Wallet — Test Page</h1>
                 <div>
