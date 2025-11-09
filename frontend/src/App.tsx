@@ -9,9 +9,11 @@ import type { JSX } from 'react'
 import ExpensesRoutes from './pages/Expenses/ExpenseRoutes'
 import LoanRoutes from './pages/Loans/LoanRoutes'
 import GroupRoutes from './pages/Groups/GroupRoutes'
+import IncomeRoutes from './pages/Income/IncomeRoutes'
 
 const menuItems: MenuItem[] = [
     { title: 'Home', path: '/home' },
+    { title: 'Income', path: '/income' },
     { title: 'Expenses', path: '/expenses' },
     { title: 'Loans', path: '/loan' },
     { title: 'Groups', path: '/groups' },
@@ -31,6 +33,9 @@ function AppContent(): JSX.Element {
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/home" element={<HomePage />} />
             <Route path="/auth" element={<AuthPage />} />
+            
+            {/* Income Routes */}
+            <Route path="/income/*" element={<IncomeRoutes />} />
 
             {/* Expense Routes */}
             <Route path="/expenses/*" element={<ExpensesRoutes />} />
