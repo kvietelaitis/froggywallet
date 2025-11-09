@@ -5,21 +5,9 @@ import RegisterPage from './pages/RegisterPage'
 import HomePage from './pages/HomePage'
 import AuthPage from './pages/AuthPage'
 import SidebarMenu, {type MenuItem} from './_components/Sidebar'
-
-import AddExpensesPage from './pages/Expenses/AddExpensesPage'
-import AddPeriodicalExpensesPage from './pages/Expenses/AddPeriodicalExpensesPage'
-import CompareExpensesPage from './pages/Expenses/CompareExpensesPage'
-import EditExpensesPage from './pages/Expenses/EditExpensesPage'
-import ExpensesPage from './pages/Expenses/ExpensesPage'
-import GroupExpensesPage from './pages/Expenses/GroupExpensesPage'
-import DeleteExpensesPage from './pages/Expenses/DeleteExpensesPage'
-
-import LoanPage from './pages/Loans/LoanPage'
-import DebtorPage from './pages/Loans/DebtorPage'
-import DeleteLoansPage from './pages/Loans/DeleteLoansPage'
-import MontlyPayment from './pages/Loans/MonthlyPayment'
-import PayLoan from './pages/Loans/PayLoan'
 import type { JSX } from 'react'
+import ExpensesRoutes from './pages/Expenses/ExpenseRoutes'
+import LoanRoutes from './pages/Loans/LoanRoutes'
 
 const menuItems: MenuItem[] = [
     { title: 'Home', path: '/home' },
@@ -41,20 +29,13 @@ function AppContent(): JSX.Element {
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/home" element={<HomePage />} />
             <Route path="/auth" element={<AuthPage />} />
+
+            {/* Expense Routes */}
+            <Route path="/expenses/*" element={<ExpensesRoutes />} />
+
+            {/* Loan Routes */}
+            <Route path="/loan/*" element={<LoanRoutes />} />
             
-            <Route path="/addexpenses" element={<AddExpensesPage />} />
-            <Route path="/addperiodicalexpenses" element={<AddPeriodicalExpensesPage />} />
-            <Route path="/compareexpenses" element={<CompareExpensesPage />} />
-            <Route path="/editexpenses" element={<EditExpensesPage />} />
-            <Route path="/expenses" element={<ExpensesPage />} />
-            <Route path="/groupexpenses" element={<GroupExpensesPage />} />
-            <Route path="/deleteexpenses" element={<DeleteExpensesPage />} />
-            
-            <Route path="/loan" element={<LoanPage />} />
-            <Route path="/deleteloan" element={<DeleteLoansPage />} />
-            <Route path="/debtor" element={<DebtorPage />} />
-            <Route path="/monthlyloan" element={<MontlyPayment />} />
-            <Route path="/payloan" element={<PayLoan />} />
           </Routes>
         </main>
     </div>
