@@ -1,3 +1,4 @@
+/* CSS Variables */
 :root {
   /* Light mode colors */
   --bg-primary: #f0f7f4;
@@ -27,6 +28,7 @@
   }
 }
 
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -41,6 +43,7 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Layout */
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -48,6 +51,80 @@ body {
   min-height: 100vh;
 }
 
+.app-layout {
+  display: flex;
+}
+
+.app-main-content {
+  flex: 1;
+  padding: 2rem;
+  margin-left: 200px; /* sidebar width */
+}
+
+.auth-container {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* Sidebar */
+.sidebar-menu {
+  width: 200px;
+  background-color: var(--bg-card);
+  border-right: 1px solid var(--border);
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.sidebar-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar-menu li {
+  padding: 10px;
+}
+
+.sidebar-menu a {
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: color 0.2s ease;
+}
+
+.sidebar-menu a:hover {
+  color: var(--accent);
+}
+
+.sidebar-menu li.active {
+  background-color: var(--bg-secondary);
+  border-left: 3px solid var(--accent);
+}
+
+.sidebar-header {
+  padding: 1.5rem 1rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.sidebar-header h2 {
+  color: var(--accent);
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.sidebar-header p {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+/* Card Component */
 .card {
   background: var(--bg-card);
   padding: 2em;
@@ -62,6 +139,7 @@ body {
   box-shadow: 0 6px 12px var(--shadow);
 }
 
+/* Buttons */
 button {
   width: 100%;
   background: var(--accent);
@@ -73,6 +151,15 @@ button {
   font-weight: 500;
   cursor: pointer;
   transition: background 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
 }
 
 .reg-button {
@@ -87,15 +174,7 @@ button {
   border-color: var(--accent-light);
 }
 
-button:hover {
-  background: var(--accent-hover);
-  transform: translateY(-1px);
-}
-
-button:active {
-  transform: translateY(0);
-}
-
+/* Form Elements */
 input, textarea, select {
   width: 100%;
   background: var(--bg-secondary);
@@ -123,6 +202,7 @@ label {
   font-size: 0.9rem;
 }
 
+/* Typography */
 h1, h2, h3, h4, h5, h6 {
   color: var(--text-primary);
   margin-bottom: 1rem;
@@ -137,12 +217,4 @@ a {
 a:hover {
   color: var(--accent-hover);
   text-decoration: underline;
-}
-
-.auth-container {
-  min-height: 90vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
 }
