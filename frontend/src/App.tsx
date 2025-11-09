@@ -12,6 +12,12 @@ import ExpensesPage from './pages/ExpensesPage'
 import GroupExpensesPage from './pages/GroupExpensesPage'
 import DeleteExpensesPage from './pages/DeleteExpensesPage'
 
+import LoanPage from './pages/Loan/LoanPage'
+import DebtorPage from './pages/Loan/DebtorPage'
+import DeleteLoansPage from './pages/Loan/DeleteLoansPage'
+import MontlyPayment from './pages/Loan/MonthlyPayment'
+import PayLoan from './pages/Loan/PayLoan'
+
 function App() {
   return (
     <BrowserRouter>
@@ -27,6 +33,12 @@ function App() {
         <Route path="/expenses" element={<ExpensesPage />} />
         <Route path="/groupexpenses" element={<GroupExpensesPage />} />
         <Route path="/deleteexpenses" element={<DeleteExpensesPage />} />
+
+        <Route path="/loan" element={<LoanPage />} />
+        <Route path="/deleteloan" element={<DeleteLoansPage />} />
+        <Route path="/debtor" element={<DebtorPage />} />
+        <Route path="/monthlyloan" element={<MontlyPayment />} />
+        <Route path="/payloan" element={<PayLoan />} />
       </Routes>
     </BrowserRouter>
   )
