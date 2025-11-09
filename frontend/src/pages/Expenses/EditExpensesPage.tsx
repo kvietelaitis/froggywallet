@@ -7,9 +7,6 @@ export default function EditExpensesPage() {
       <div style={{ maxWidth: 420, margin: '40px auto', textAlign: 'center' }}>
         <h1>Redaguoti išlaidas</h1>
         <p>Šiuo metu čia rodomas išlaidų redagavimas.</p>
-        <Link to="/expenses" style={{ textDecoration: 'underline', color: 'red' }}>
-          Grįžti į išlaidų puslapį
-        </Link>
       </div>
     </div>
   )

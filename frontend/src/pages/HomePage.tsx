@@ -156,9 +156,6 @@ const HomePage: React.FC = () => {
                     )}
                 </aside>
             </section>
-            <Link to="/expenses" style={{ textDecoration: 'underline', color: 'red' }}>
-              <p>Eiti į išlaidų sąrašą</p>
-            </Link>
         </div>
     );
 };

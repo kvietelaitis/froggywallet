@@ -1,34 +1,89 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 
 export default function ExpensesPage() {
+  const navigate = useNavigate();
+
   return (
     <div className="auth-container">
-      <div style={{ maxWidth: 420, margin: '40px auto', textAlign: 'center' }}>
+      <div style={{ maxWidth: 420, margin: "40px auto", textAlign: "center" }}>
         <h1>Išlaidų peržiūra</h1>
         <p>Šiuo metu čia rodoma išlaidų peržiūra.</p>
-        <Link to="/home" style={{ textDecoration: 'underline', color: 'red' }}>
-          <p>Grįžti į pagrindinį puslapį</p>
-        </Link>
-        <Link to="/expenses/addexpenses" style={{ textDecoration: 'underline', color: 'red' }}>
-          <p>Pridėti išlaidas</p>
-        </Link>
-        <Link to="/expenses/addperiodicalexpenses" style={{ textDecoration: 'underline', color: 'red' }}>
-          <p>Pridėti pasikartojančias išlaidas</p>
-        </Link>
-        <Link to="/expenses/compareexpenses" style={{ textDecoration: 'underline', color: 'red' }}>
-          <p>Palyginti išlaidas</p>
-        </Link>
-        <Link to="/expenses/deleteexpenses" style={{ textDecoration: 'underline', color: 'red' }}>
-          <p>Pašalinti išlaidas</p>
-        </Link>
-        <Link to="/expenses/editexpenses" style={{ textDecoration: 'underline', color: 'red' }}>
-          <p>Redaguoti išlaidas</p>
-        </Link>
-        <Link to="/expenses/groupexpenses" style={{ textDecoration: 'underline', color: 'red' }}>
-          <p>Grupuoti išlaidas</p>
-        </Link>
+
+        <div style={{ alignContent: "center", width: "100%" }}>
+          
+          <button
+            style={{
+              margin: "10px",
+              height: "70px",
+              width: "400px",
+              maxWidth: "400px",
+            }}
+            onClick={() => navigate("/expenses/addexpenses")}
+          >
+            Pridėti išlaidas
+          </button>
+
+          <button
+            style={{
+              margin: "10px",
+              height: "70px",
+              width: "400px",
+              maxWidth: "400px",
+            }}
+            onClick={() => navigate("/expenses/addperiodicalexpenses")}
+          >
+            Pridėti pasikartojančias išlaidas
+          </button>
+
+          <button
+            style={{
+              margin: "10px",
+              height: "70px",
+              width: "400px",
+              maxWidth: "400px",
+            }}
+            onClick={() => navigate("/expenses/compareexpenses")}
+          >
+            Palyginti išlaidas
+          </button>
+
+          <button
+            style={{
+              margin: "10px",
+              height: "70px",
+              width: "400px",
+              maxWidth: "400px",
+            }}
+            onClick={() => navigate("/expenses/deleteexpenses")}
+          >
+            Pašalinti išlaidas
+          </button>
+
+          <button
+            style={{
+              margin: "10px",
+              height: "70px",
+              width: "400px",
+              maxWidth: "400px",
+            }}
+            onClick={() => navigate("/expenses/editexpenses")}
+          >
+            Redaguoti išlaidas
+          </button>
+
+          <button
+            style={{
+              margin: "10px",
+              height: "70px",
+              width: "400px",
+              maxWidth: "400px",
+            }}
+            onClick={() => navigate("/expenses/groupexpenses")}
+          >
+            Grupuoti išlaidas
+          </button>
+        </div>
       </div>
     </div>
-  )
+  );
 }
