@@ -10,22 +10,22 @@ export default function ExpensesPage() {
         <Link to="/home" style={{ textDecoration: 'underline', color: 'red' }}>
           <p>Grįžti į pagrindinį puslapį</p>
         </Link>
-        <Link to="/addexpenses" style={{ textDecoration: 'underline', color: 'red' }}>
+        <Link to="/expenses/addexpenses" style={{ textDecoration: 'underline', color: 'red' }}>
           <p>Pridėti išlaidas</p>
         </Link>
-        <Link to="/addperiodicalexpenses" style={{ textDecoration: 'underline', color: 'red' }}>
+        <Link to="/expenses/addperiodicalexpenses" style={{ textDecoration: 'underline', color: 'red' }}>
           <p>Pridėti pasikartojančias išlaidas</p>
         </Link>
-        <Link to="/compareexpenses" style={{ textDecoration: 'underline', color: 'red' }}>
+        <Link to="/expenses/compareexpenses" style={{ textDecoration: 'underline', color: 'red' }}>
           <p>Palyginti išlaidas</p>
         </Link>
-        <Link to="/deleteexpenses" style={{ textDecoration: 'underline', color: 'red' }}>
+        <Link to="/expenses/deleteexpenses" style={{ textDecoration: 'underline', color: 'red' }}>
           <p>Pašalinti išlaidas</p>
         </Link>
-        <Link to="/editexpenses" style={{ textDecoration: 'underline', color: 'red' }}>
+        <Link to="/expenses/editexpenses" style={{ textDecoration: 'underline', color: 'red' }}>
           <p>Redaguoti išlaidas</p>
         </Link>
-        <Link to="/groupexpenses" style={{ textDecoration: 'underline', color: 'red' }}>
+        <Link to="/expenses/groupexpenses" style={{ textDecoration: 'underline', color: 'red' }}>
           <p>Grupuoti išlaidas</p>
         </Link>
       </div>

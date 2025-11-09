@@ -39,7 +39,7 @@ const LoanPage = () => {
 
   return (
     <div style = {{alignContent: "center", width: "100%"}}>
-      <button style = {{margin: "10px", height: "70px", width: "400xp", maxWidth: "400px"}} onClick={() => navigate('/debtor')} >
+      <button style = {{margin: "10px", height: "70px", width: "400xp", maxWidth: "400px"}} onClick={() => navigate('debtor')} >
         Debtors
       </button>
 
@@ -73,21 +73,21 @@ const LoanPage = () => {
               
               <button 
                 style={{margin: "10px", maxWidth: "400px"}}
-                onClick={() => navigate('/deleteloan')}
+                onClick={() => navigate('deleteloan')}
               >
                 Delete
               </button>
 
               <button 
                 style={{margin: "10px", maxWidth: "400px"}}
-                onClick={() => navigate('/monthlyloan')}
+                onClick={() => navigate('monthlyloan')}
               >
                 Calculate next payment
               </button>
 
               <button 
                 style={{margin: "10px", maxWidth: "400px"}}
-                onClick={() => navigate('/payloan')}
+                onClick={() => navigate('payloan')}
               >
                 Pay off loan
               </button>
