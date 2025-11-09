@@ -10,10 +10,12 @@ import ExpensesRoutes from './pages/Expenses/ExpenseRoutes'
 import LoanRoutes from './pages/Loans/LoanRoutes'
 import GroupRoutes from './pages/Groups/GroupRoutes'
 import IncomeRoutes from './pages/Income/IncomeRoutes'
+import BudgetRoutes from './pages/Budget/BudgetRoutes'
 
 const menuItems: MenuItem[] = [
     { title: 'Home', path: '/home' },
     { title: 'Income', path: '/income' },
+    { title: 'Budget', path: '/budget' },
     { title: 'Expenses', path: '/expenses' },
     { title: 'Loans', path: '/loan' },
     { title: 'Groups', path: '/groups' },
@@ -36,6 +38,9 @@ function AppContent(): JSX.Element {
             
             {/* Income Routes */}
             <Route path="/income/*" element={<IncomeRoutes />} />
+
+            {/* Budget Routes */}
+            <Route path="/budget/*" element={<BudgetRoutes />} />
 
             {/* Expense Routes */}
             <Route path="/expenses/*" element={<ExpensesRoutes />} />
