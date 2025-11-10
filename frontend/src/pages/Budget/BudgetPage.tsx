@@ -18,6 +18,10 @@ export default function BudgetPage(){
             <button onClick={() => navigate('create-budget')}>Create Budget</button>
             
             <button style={{marginTop: '1rem'}} onClick={() => navigate('edit-budget')}>Existing Budget</button>
+
+            <button style={{marginTop: '1rem'}} onClick={() => navigate('add-category')}>
+                All Categories
+            </button>
         </div>
     );
 }

@@ -5,10 +5,14 @@ function BudgetCreationPage() {
 
     return (
         <div>
-            <h1>Category Picker Page</h1>
+            <h1>Category Page</h1>
 
-            <button onClick={() => navigate('../create-category')}>
+            <button style={{marginTop: '1rem'}} onClick={() => navigate('../create-category')}>
                 Create category
+            </button>
+
+            <button style={{marginTop: '1rem'}} onClick={() => navigate('../create-category')}>
+                Existing category
             </button>
 
         </div>
