@@ -17,8 +17,12 @@ function GroupMemberInfoPage() {
   
   return (
     <div>
-      <h1>{from === 'create' ? 'Add Members to New Group' : 'Edit Group Members'}</h1>
-      {/* your form */}
+      <h1>{from === 'create' ? 'Add Members to New Group' : 'Add Group Members'}</h1>
+        <input type="email" placeholder="Member Email" />
+
+        <button style={{ marginTop: '1rem' }} onClick={() => navigate(-1)}>
+            Add member
+        </button>
     </div>
   );
 }

@@ -12,6 +12,7 @@ import GroupRoutes from './pages/Groups/GroupRoutes'
 import IncomeRoutes from './pages/Income/IncomeRoutes'
 import BudgetRoutes from './pages/Budget/BudgetRoutes'
 import InvestmentsRoutes from './pages/Investments/InvestmentRoutes'
+import SettingsPage from './pages/SettingsPage'
 
 const menuItems: MenuItem[] = [
     { title: 'Home', path: '/home' },
@@ -37,6 +38,7 @@ function AppContent(): JSX.Element {
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/home" element={<HomePage />} />
             <Route path="/auth" element={<AuthPage />} />
+            <Route path="/settings" element={<SettingsPage />} />
             
             {/* Income Routes */}
             <Route path="/income/*" element={<IncomeRoutes />} />

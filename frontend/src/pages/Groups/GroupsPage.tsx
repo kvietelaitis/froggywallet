@@ -23,7 +23,7 @@ export default function GroupsPage(){
             <p style={{marginBottom: '1rem'}}>This is where the groups will be displayed.</p>
             <button onClick={() => navigate('create-group')}>Create Group</button>
             
-            <button style={{marginTop: '1rem'}} onClick={() => navigate('edit-group')}>Existing1 Group</button>
+            <button style={{marginTop: '1rem'}} onClick={() => navigate('edit-group')}>Existing Group</button>
         </div>
     );
 }

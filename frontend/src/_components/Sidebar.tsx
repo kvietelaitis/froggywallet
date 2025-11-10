@@ -18,7 +18,7 @@ const SidebarMenu: React.FC<{ menuItems: MenuItem[] }> = ({ menuItems }) => {
             </div>
             <ul>
                 {menuItems.map((item, index) => { 
-                    const isActive = location.pathname === item.path;
+                    const isActive = location.pathname.startsWith(item.path);
 
                     return (
                         <li key={index} className={isActive ? 'active' : ''}>
